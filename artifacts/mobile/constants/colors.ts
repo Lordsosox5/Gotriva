@@ -1,0 +1,42 @@
+const palette = {
+  text: '#F4F0FF',
+  tint: '#7CFF4F',
+  background: '#1B0745',
+  foreground: '#F4F0FF',
+  card: '#2A0A5E',
+  cardForeground: '#F4F0FF',
+  primary: '#7CFF4F',
+  primaryForeground: '#2A0A5E',
+  secondary: '#32116A',
+  secondaryForeground: '#F4F0FF',
+  muted: '#32116A',
+  mutedForeground: '#CBBEF0',
+  accent: '#7CFF4F',
+  accentForeground: '#2A0A5E',
+  destructive: '#FFD6D6',
+  destructiveForeground: '#7A1212',
+  border: 'rgba(255,255,255,0.18)',
+  input: 'rgba(255,255,255,0.14)',
+  glass: 'rgba(255,255,255,0.09)',
+  glassBorder: 'rgba(255,255,255,0.18)',
+  glassLow: 'rgba(255,255,255,0.035)',
+  glassSoft: 'rgba(255,255,255,0.06)',
+  glassSubtle: 'rgba(255,255,255,0.08)',
+  accentWash: 'rgba(124,255,79,0.12)',
+  accentWashStrong: 'rgba(124,255,79,0.18)',
+  dangerWash: 'rgba(255,214,214,0.12)',
+  placeholder: 'rgba(203,190,240,0.7)',
+  skeleton: 'rgba(255,255,255,0.14)',
+  track: 'rgba(255,255,255,0.13)',
+  shadow: '#090016',
+  subtleText: '#CBBEF0',
+  violet: '#7C4DFF',
+};
+
+const colors = {
+  light: palette,
+  dark: palette,
+  radius: 20,
+};
+
+export default colors;
