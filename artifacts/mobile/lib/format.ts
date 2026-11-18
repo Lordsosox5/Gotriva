@@ -19,5 +19,5 @@ export function daysUntil(value: string | null): number {
 
 export function initials(name: string | null | undefined): string {
   const trimmed = name?.trim();
-  return trimmed ? trimmed.slice(0, 1) : '؟';
+  return trimmed ? trimmed.slice(0, 1) : t.common.unknownInitial;
 }

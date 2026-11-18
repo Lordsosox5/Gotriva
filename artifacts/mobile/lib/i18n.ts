@@ -23,6 +23,7 @@ export const strings = {
       days: 'أيام',
       friend: 'صديق',
       unknown: 'غير معروف',
+      unknownInitial: '؟',
       delivery: 'اتفاق مباشر',
     },
     auth: {

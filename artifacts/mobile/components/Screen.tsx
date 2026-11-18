@@ -1,5 +1,6 @@
 import { Platform, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { AppBackground } from '@/components/Brand';
 
 export function useScreenInsets() {
   const insets = useSafeAreaInsets();
@@ -19,6 +20,7 @@ export function Screen({
   const insets = useScreenInsets();
   return (
     <View style={[styles.screen, { paddingTop: insets.top + 8 }, style]}>
+      <AppBackground />
       {children}
     </View>
   );

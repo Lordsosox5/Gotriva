@@ -13,11 +13,11 @@
       "resizeMode": "contain"
     },
     "ios": {
-    "bundleIdentifier": "com.wetriva.app",
+      "bundleIdentifier": "com.wetriva.app",
       "supportsTablet": false
     },
     "android": {
-    "package": "com.wetriva.app",
+      "package": "com.wetriva.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#1B0745"

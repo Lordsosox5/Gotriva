@@ -16,14 +16,28 @@ import {
 } from '@expo-google-fonts/ibm-plex-sans-arabic';
 import { router, Stack, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
+import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { AppBackground } from '@/components/Brand';
 import { AuthProvider, useAuth } from '@/lib/auth';
 import { prepareArabicLayout } from '@/lib/rtl';
 import { useColors } from '@/hooks/useColors';
+import colors from '@/constants/colors';
 
 void SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
+const wetrivaNavigationTheme = {
+  ...DarkTheme,
+  colors: {
+    ...DarkTheme.colors,
+    primary: colors.dark.primary,
+    background: 'transparent',
+    card: 'transparent',
+    text: colors.dark.text,
+    border: colors.dark.glassBorder,
+    notification: colors.dark.destructive,
+  },
+};
 
 function RootLayoutNav() {
   const { session, loading } = useAuth();
@@ -101,7 +115,9 @@ export default function RootLayout() {
                 <View style={{ flex: 1, backgroundColor: colors.background }}>
                   <StatusBar barStyle="light-content" />
                   <AppBackground />
-                  <RootLayoutNav />
+                  <ThemeProvider value={wetrivaNavigationTheme}>
+                    <RootLayoutNav />
+                  </ThemeProvider>
                 </View>
               </AuthProvider>
             </QueryClientProvider>

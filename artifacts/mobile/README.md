@@ -34,7 +34,7 @@ If the Supabase values are missing, the app shows an Arabic setup message instea
 `eas.json` includes internal preview and production profiles. Before building for distribution:
 
 1. Create/link the Wetriva project in your Expo account and copy its EAS project ID into `expo.extra.eas.projectId` in `app.json`.
-2. Set unique iOS bundle and Android application identifiers in `app.json` before the first store build.
+2. Confirm the starter identifier `com.wetriva.app` is available in both stores; change it in `app.json` if it is already in use.
 3. Add `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` as public build environment variables in EAS.
 4. Configure the iOS and Android signing credentials and push-notification credentials for the linked EAS project.
 5. Select the preview or production profile in EAS Build. Android and iOS builds are configured separately by EAS based on the app's platform configuration.

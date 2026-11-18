@@ -1,7 +1,8 @@
 import { Link, Stack } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import { useColors } from '@/hooks/useColors';
 import { t } from '@/lib/i18n';
+import { Screen } from '@/components/Screen';
 
 export default function NotFoundScreen() {
   const colors = useColors();
@@ -9,7 +10,7 @@ export default function NotFoundScreen() {
   return (
     <>
       <Stack.Screen options={{ title: t.appTitle }} />
-      <View style={[styles.container, { backgroundColor: colors.background }]}>
+      <Screen style={styles.container}>
         <Text style={[styles.title, { color: colors.foreground }]}>
           {t.errors.generic}
         </Text>
@@ -19,7 +20,7 @@ export default function NotFoundScreen() {
             {t.nav.home}
           </Text>
         </Link>
-      </View>
+      </Screen>
     </>
   );
 }
